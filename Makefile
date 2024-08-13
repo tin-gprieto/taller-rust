@@ -39,3 +39,14 @@ clean_vides:
 	rm -rfv data/camera_videos/*
 	touch data/camera_videos/temp
 	rmdir -v data/camera_videos/*
+
+demo_server:
+	chmod +x data/scripts/*.sh
+	./data/scripts/install_ca.sh
+	./data/scripts/run_server.sh
+
+demo_clients:
+	chmod +x data/scripts/*.sh
+	./data/scripts/install_ca.sh
+	./data/scripts/run_clients.sh
+	

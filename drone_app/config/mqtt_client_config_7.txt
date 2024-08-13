@@ -1,7 +1,7 @@
 id: drone7
 password: 1234
 ip: 127.0.0.1
-port: 5000
+port: 8080
 log_path: data/logs/drone_7_log.csv
 log_in_terminal: true
 protocol_name: MQTT
