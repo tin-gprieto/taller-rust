@@ -204,15 +204,13 @@ Cuando se necesite agregar manualmente cámaras mediante el sistema central, se 
 Dado que los certificados están creados, en una terminal se debe 
 correr:
 
-Para correr el **broker** y la **monitoring_app** en una pc:
+Para correr el **broker** y los **drones** en una pc:
 
     make demo_server
 
-Para correr el **cams_system** y los **drones** en otra pc:
+Para correr el **cams_system** y la **monitoring_app** en otra pc:
 
     make demo_clients
 
-**En los clientes se debe configurar la ip del server**
-
-Las camaras que tienen drones mas cercanos son las **2, 3 y 4**
+**En cam system y monitoring app, se debe configurar la ip del server**
 
