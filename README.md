@@ -103,7 +103,7 @@ Cabe destacar que, en este ejemplo, se esta ejecutando la instancia del **drone1
 
 En caso que se haya ejecutado completamente el proyecto, y se desee eliminar tanto los archivos de persistencia correspondientes a las aplicaciones y al broker (en caso de que se quiera iniciar el proyecto de cero), o se busque borrar aquellas carpetas temporales que corresponden a cada camara, donde se colocan los incidentes potenciales que recibe en el directorio *camera_videos* (en caso de querer iniciar nuevamente de cero el sistema de camaras) se cuenta con el siguiente comando:
 
-    make reset
+    make clean
 
 ---
 
@@ -142,7 +142,7 @@ Además de las configuraciones propias de la aplicación, todas cuentan con dos 
 
 Como se menciona anteriormente, las aplicaciones tienen en su configuración de sistema, la dirección del archivo de configuración mqtt. Este archivo setea las características importantes a la hora de establecer una conexión con el protocolo.
 
-##### Client
+##### Client config
 
 La configuración del cliente tiene como configuraciones más importantes:
 
@@ -154,7 +154,7 @@ La configuración del cliente tiene como configuraciones más importantes:
 | *log_path* | archivo para loggear el protocolo (ej. data/logs/cams_log.csv) |
 | *log_in_terminal* | true/false si desea o no que el logger se muestre por terminal |
 
-##### Server
+##### Server config
 
 La configuración del broker tiene como configuraciones más importantes:
 
@@ -187,6 +187,20 @@ Se dispone de un botón en la interfaz de la Aplicación de Monitoreo, el cual p
 
 ---
 
+## Demo
+
+Dado que los certificados están creados, en una terminal se debe correr:
+
+Para correr el **broker** y los **drones** en una pc:
+
+    make demo_server
+
+Para correr el **cams_system** y la **monitoring_app** en otra pc:
+
+    make demo_clients
+
+En cam system y monitoring app, se debe configurar la ip del server
+
 ## Cámaras recomendadas
 
 Cuando se necesite agregar manualmente cámaras mediante el sistema central, se recomiendan estas posiciones para la Ciudad Autónoma de Buenos aires:
@@ -199,18 +213,3 @@ Cuando se necesite agregar manualmente cámaras mediante el sistema central, se 
     add;-34.608203436360505;-58.37366305468922
     add;-34.568241129718864;-58.44865694819334
     add;-34.61727675184148;-58.51268664179685
-
-## Demo
-Dado que los certificados están creados, en una terminal se debe 
-correr:
-
-Para correr el **broker** y los **drones** en una pc:
-
-    make demo_server
-
-Para correr el **cams_system** y la **monitoring_app** en otra pc:
-
-    make demo_clients
-
-**En cam system y monitoring app, se debe configurar la ip del server**
-
