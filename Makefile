@@ -40,6 +40,7 @@ clean_vides:
 	touch data/camera_videos/temp
 	rmdir -v data/camera_videos/*
 
+# DEMO
 demo_server:
 	chmod +x data/scripts/*.sh
 	./data/scripts/install_ca.sh
@@ -50,3 +51,7 @@ demo_clients:
 	./data/scripts/install_ca.sh
 	./data/scripts/run_clients.sh
 	
+# Carga intensiva de incidentes
+intensive:
+	chmod +x data/scripts/intensive.sh
+	./data/scripts/intensive.sh
